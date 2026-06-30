@@ -318,3 +318,140 @@ hamburger.addEventListener("click",()=>{
     nav.classList.toggle("mobile-open");
 
 });
+/*=========================
+Typing Hero
+=========================*/
+
+const words=[
+
+"DevOps Engineer",
+
+"Kubernetes Expert",
+
+"AWS Professional",
+
+"Cloud Architect",
+
+"Platform Engineer"
+
+];
+
+let word=0;
+
+let letter=0;
+
+let deleting=false;
+
+const typing=document.getElementById("typing-title");
+
+function typeHero(){
+
+if(!typing) return;
+
+const current=words[word];
+
+typing.textContent=current.substring(0,letter);
+
+if(!deleting){
+
+letter++;
+
+if(letter>current.length){
+
+deleting=true;
+
+setTimeout(typeHero,1500);
+
+return;
+
+}
+
+}else{
+
+letter--;
+
+if(letter===0){
+
+deleting=false;
+
+word=(word+1)%words.length;
+
+}
+
+}
+
+setTimeout(typeHero,deleting?60:120);
+
+}
+
+typeHero();
+
+
+
+/*=========================
+Hero Terminal
+=========================*/
+
+const heroTerminal=document.getElementById("hero-terminal");
+
+const lines=[
+
+"$ terraform init",
+
+"$ terraform apply",
+
+"✔ Infrastructure Created",
+
+"$ docker build -t opsbyyash .",
+
+"$ docker push",
+
+"$ kubectl apply -f deployment.yaml",
+
+"$ kubectl get pods",
+
+"backend-7854 Running",
+
+"frontend-3421 Running",
+
+"database Running",
+
+"$ argocd sync production",
+
+"✔ Production Updated"
+
+];
+
+let currentLine=0;
+
+function printTerminal(){
+
+if(!heroTerminal) return;
+
+heroTerminal.innerHTML+=lines[currentLine]+"\n";
+
+heroTerminal.scrollTop=heroTerminal.scrollHeight;
+
+currentLine++;
+
+if(currentLine>=lines.length){
+
+setTimeout(()=>{
+
+heroTerminal.innerHTML="";
+
+currentLine=0;
+
+printTerminal();
+
+},2500);
+
+return;
+
+}
+
+setTimeout(printTerminal,600);
+
+}
+
+printTerminal();
