@@ -303,3 +303,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+/* ===========================
+   MOBILE MENU
+=========================== */
+
+const hamburger = document.getElementById("hamburger");
+
+const nav = document.getElementById("navMenu");
+
+hamburger.addEventListener("click",()=>{
+
+    nav.classList.toggle("mobile-open");
+
+});
