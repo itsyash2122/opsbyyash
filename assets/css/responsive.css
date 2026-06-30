@@ -309,6 +309,50 @@ footer h3{
 
 }
 
+
+nav{
+
+    position:fixed;
+
+    top:80px;
+
+    right:-100%;
+
+    width:280px;
+
+    height:100vh;
+
+    background:#09111d;
+
+    transition:.4s;
+
+    padding:40px;
+
+    border-left:1px solid rgba(255,255,255,.08);
+
+}
+
+nav ul{
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+.hamburger{
+
+    display:flex;
+
+}
+
+.desktop-btn{
+
+    display:none;
+
+}
+
+
 }
 
 
