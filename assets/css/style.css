@@ -951,3 +951,58 @@ min-height:420px;
 white-space:pre-wrap;
 
 }
+.trusted{
+
+padding:100px 0;
+
+}
+
+.trusted h2{
+
+text-align:center;
+
+margin-bottom:60px;
+
+font-size:42px;
+
+}
+
+.tech-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+.tech{
+
+padding:35px;
+
+background:#101826;
+
+border-radius:16px;
+
+text-align:center;
+
+font-size:20px;
+
+font-weight:600;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.3s;
+
+}
+
+.tech:hover{
+
+transform:translateY(-8px);
+
+border-color:#00D9FF;
+
+box-shadow:0 15px 40px rgba(0,170,255,.15);
+
+}
